@@ -14,12 +14,14 @@ gwt-unitCache/
 # more caches and things from deploy #
 war/WEB-INF/deploy/
 war/WEB-INF/classes/
+/JasperGWT/
 
 #compilation logs
 .gwt/
 
 #caching for already compiled files
 gwt-unitCache/
+/gwt-unitCache/
 
 #gwt junit compilation files
 www-test/
@@ -32,3 +34,8 @@ www-test/
 .settings
 .classpath
 .project
+
+#uncategorised
+.xls
+.xlsx
+.pdf
