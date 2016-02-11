@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<context-param>
+		<param-name>contextClass</param-name>
+		<param-value>
+			org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>com.jipasoft.sample.shared</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
+
+	<!-- SpringGwt remote service servlet -->
+	<servlet>
+		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
+		<servlet-class>
+			org.spring4gwt.server.SpringGwtRemoteServiceServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextClass</param-name>
+			<param-value>
+				org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>com.jipasoft.sample.shared</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
+		<url-pattern>/JasperGWT/springGwtServices/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- jasper servlet -->
+	<servlet>
+		<servlet-name>jasperServlet</servlet-name>
+		<servlet-class>com.jipasoft.sample.server.SampleReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jasperServlet</servlet-name>
+		<url-pattern>/JasperGWT/rptUserReport</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>JasperGWT.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>
