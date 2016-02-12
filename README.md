@@ -18,7 +18,7 @@ Don't use this mode. It's a legacy mode with support for older browsers. To run 
 ### Running the super mode
 The recommended way to run the application is with the `super dev mode`. This mode runs two servers. The `code server` which compiles your java code and the `applicationn server` that serves your javascript content.
 To run the application in `super dev mode`, run
-> mvn gwt:run-codeserver
+> mvn process-classes gwt:run-codeserver
 
 This starts the `code server`. Visit [http://localhost:9876](http://localhost:9876) in your browser. Drag and drop the `Dev Mode On` and `Dev Mode off` bookmarklets to your browser's bookmark bar.
 Open another shell window and run
