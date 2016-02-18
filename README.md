@@ -6,6 +6,16 @@ This project uses the [codehaus.mojo](https://gwt-maven-plugin.github.io/gwt-mav
 - Maven 3.3.3+
 - GWT 2.6.0+
 
+## Getting the dependencies
+The latest version of Spring4GWT can be found [here](https://code.google.com/archive/p/spring4gwt/downloads)
+
+---
+To install the dependency in your local maven repository, run 
+> mvn install:install-file -Dfile=&lt;path-to-file&gt; -DgroupId=_org.spring4gwt_ 
+-DartifactId=_spring4gwt_ -Dversion=_0.0.1_ -Dpackaging=_jar_
+
+where `&lt;path-to-file&gt;` is the relative or absolute path to the location of the _spring4gwt.jar_.
+
 ## Running the application
 The application can be run one of two ways
 - [Classic Dev Mode](http://www.gwtproject.org/doc/latest/DevGuideCompilingAndDebugging.html)

@@ -2,11 +2,15 @@ package com.jipasoft.sample.server;
 
 import org.springframework.stereotype.Service;
 
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.jipasoft.sample.client.GreetingService;
 import com.jipasoft.sample.shared.FieldVerifier;
 
 /**
- * The server side implementation of the RPC service.
+ * The server side implementation of the RPC service. The {@link Service} annotation
+ * declares this class as a bean candidate for {@ Dependency Injection}. This eliminates
+ * the need to extend {@link RemoteServiceServlet} or contain any other coupling to GWT.
+ * Requests to the {@ code /greet} is handled by this bean.
  */
 @Service("greet")
 public class GreetingServiceImpl implements GreetingService {
