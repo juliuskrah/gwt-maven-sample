@@ -12,7 +12,7 @@ public class ContentContainer {
 		return instance;
 	}
 
-	public void setContent(Content content) {
+	public void setContent(final Content content) {
 		RootPanel.get("body").clear();
 		Window.setTitle(content.getHtmlTitle());
 		RootPanel.get("body").add(content);

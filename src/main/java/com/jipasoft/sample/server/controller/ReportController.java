@@ -13,7 +13,7 @@ public class ReportController {
 	private final Logger log = Logger.getLogger(this.getClass());
 
 	@RequestMapping("/rptUserReport")
-	public String generateReport(Model model) {
+	public String generateReport(final Model model) {
 		model.addAttribute("datasource", new JREmptyDataSource());
 		model.addAttribute("format", "pdf");
 

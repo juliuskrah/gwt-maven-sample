@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<nav class="navbar navbar-inverse ">
+			<div class="container">
+				<div class="navbar-header">
+					<g:Anchor styleName="navbar-brand" ui:field="home" href="#list">GWT Form</g:Anchor>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active">
+							<g:Anchor ui:field="user" href="#userForm">Add User</g:Anchor>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</g:HTMLPanel>
+</ui:UiBinder> 

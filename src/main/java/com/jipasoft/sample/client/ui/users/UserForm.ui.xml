@@ -1,0 +1,166 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	/* Add CSS here. See the GWT docs on UI Binder for more details */
+	.important {
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<H1>
+			<span ui:field="span"></span>
+		</H1>
+
+		<form class="form-horizontal">
+
+			<g:TextBox visible="false" ui:field="id" />
+
+			<div class="form-group" ui:field="nameDiv">
+				<label class="col-sm-2 control-label">Name</label>
+				<div class="col-sm-10">
+					<g:TextBox ui:field="name" styleName="form-control" />
+					<g:Label ui:field="nameLabel" styleName="control-label"
+						visible="false">Name is required or too short!</g:Label>
+				</div>
+			</div>
+
+			<div class="form-group" ui:field="emailDiv">
+				<label class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<g:TextBox ui:field="email" styleName="form-control" />
+					<g:Label ui:field="emailLabel" styleName="control-label"
+						visible="false">Email is required or invalid email format!</g:Label>
+				</div>
+			</div>
+
+			<div class="form-group" ui:field="passwordDiv">
+				<label class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-10">
+					<g:PasswordTextBox ui:field="password" styleName="form-control" />
+					<g:Label ui:field="passwordLabel" styleName="control-label"
+						visible="false">Password is required or too short!</g:Label>
+				</div>
+			</div>
+
+			<div class="form-group" ui:field="confirmPasswordDiv">
+				<label class="col-sm-2 control-label">confirm Password</label>
+				<div class="col-sm-10">
+					<g:PasswordTextBox ui:field="confirmPassword"
+						styleName="form-control" />
+					<g:Label ui:field="confirmPasswordLabel" styleName="control-label"
+						visible="false">Passwords do not match!</g:Label>
+				</div>
+			</div>
+
+			<div class="form-group" ui:field="addressDiv">
+				<label class="col-sm-2 control-label">Address</label>
+				<div class="col-sm-10">
+					<g:TextArea ui:field="address" height="5" styleName="form-control" />
+					<g:Label ui:field="addressLabel" styleName="control-label"
+						visible="false">Address is required or too short</g:Label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Newsletter</label>
+				<div class="col-sm-10">
+					<div class="checkbox">
+						<label>
+							<g:CheckBox ui:field="newsletter" checked="true" />
+						</label>
+						<g:Label ui:field="newsletterLabel" styleName="control-label"
+							visible="false" />
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group" ui:field="frameworkDiv">
+				<label class="col-sm-2 control-label">Web Frameworks</label>
+				<div class="col-sm-10">
+					<g:CheckBox ui:field="framework1" styleName="checkbox-inline"
+						name="framework" formValue="Spring MVC" checked="true">Spring MVC</g:CheckBox>
+					<g:CheckBox ui:field="framework2" styleName="checkbox-inline"
+						name="framework" formValue="Struts 2">Struts 2</g:CheckBox>
+					<g:CheckBox ui:field="framework3" styleName="checkbox-inline"
+						name="framework" formValue="JSF 2">JSF 2</g:CheckBox>
+					<g:CheckBox ui:field="framework4" styleName="checkbox-inline"
+						name="framework" formValue="GWT" checked="true">GWT</g:CheckBox>
+					<g:CheckBox ui:field="framework5" styleName="checkbox-inline"
+						name="framework" formValue="Play">Play</g:CheckBox>
+					<g:CheckBox ui:field="framework6" styleName="checkbox-inline"
+						name="framework" formValue="Apache Wicket">Apache Wicket</g:CheckBox>
+					<br />
+					<g:Label ui:field="frameworkLabel" styleName="control-label"
+						visible="false">Please select at least two frameworks!</g:Label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Sex</label>
+				<div class="col-sm-10">
+					<label class="radio-inline">
+						<g:RadioButton ui:field="sex1" styleName="radio-inline"
+							formValue="M" name="sex" value="true">
+							Male</g:RadioButton>
+					</label>
+					<label class="radio-inline">
+						<g:RadioButton ui:field="sex2" styleName="radio-inline"
+							formValue="F" name="sex">
+							Female</g:RadioButton>
+					</label>
+					<br />
+					<g:Label ui:field="sexLabel" styleName="control-label"
+						visible="false" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Number</label>
+				<div class="col-sm-10">
+					<g:RadioButton ui:field="number1" styleName="radio-inline"
+						formValue="1" name="number">1</g:RadioButton>
+					<g:RadioButton ui:field="number2" styleName="radio-inline"
+						formValue="2" name="number" value="true">2</g:RadioButton>
+					<g:RadioButton ui:field="number3" styleName="radio-inline"
+						formValue="3" name="number">3</g:RadioButton>
+					<g:RadioButton ui:field="number4" styleName="radio-inline"
+						formValue="4" name="number">4</g:RadioButton>
+					<g:RadioButton ui:field="number5" styleName="radio-inline"
+						formValue="5" name="number">5</g:RadioButton>
+					<br />
+					<g:Label ui:field="numberLabel" styleName="control-label"
+						visible="false" />
+				</div>
+			</div>
+
+			<div class="form-group" ui:field="countryDiv">
+				<label class="col-sm-2 control-label">Country</label>
+				<div class="col-sm-5">
+					<g:ValueListBox ui:field="country" styleName="form-control" />
+					<g:Label ui:field="countryLabel" styleName="control-label"
+						visible="false">Country is required!</g:Label>
+				</div>
+				<div class="col-sm-5"></div>
+			</div>
+
+			<div class="form-group" ui:field="skillDiv">
+				<label class="col-sm-2 control-label">Java Skills</label>
+				<div class="col-sm-5">
+					<g:ListBox ui:field="skill" multipleSelect="true" height="5"
+						styleName="form-control" />
+					<g:Label ui:field="skillLabel" styleName="control-label"
+						visible="false">Please select at least three skills!</g:Label>
+				</div>
+				<div class="col-sm-5"></div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<g:Button ui:field="submit" styleName="btn-lg btn-primary pull-right" />
+				</div>
+			</div>
+		</form>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

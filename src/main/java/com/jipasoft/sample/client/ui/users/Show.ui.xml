@@ -8,10 +8,58 @@
 	}
 	</ui:style>
 	<g:HTMLPanel>
-		<!-- Add GWT widgets here. Enter < and hit Ctrl-Space to auto-complete 
-			widget names. The ui:field attribute binds an element to a field in the owner 
-			class. See the GWT docs on UI Binder for more details. -->
-		Hello,
-		<g:Button styleName="{style.important}" ui:field="button" />
+		<h1>User Detail</h1>
+		<br />
+
+		<div class="row">
+			<label class="col-sm-2">ID</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Name</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Email</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Address</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Newsletter</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Web Frameworks</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Sex</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Number</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Country</label>
+			<div class="col-sm-10"></div>
+		</div>
+
+		<div class="row">
+			<label class="col-sm-2">Skill</label>
+			<div class="col-sm-10"></div>
+		</div>
+
 	</g:HTMLPanel>
 </ui:UiBinder> 

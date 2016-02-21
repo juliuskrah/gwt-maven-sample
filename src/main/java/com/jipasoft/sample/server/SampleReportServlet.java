@@ -30,29 +30,29 @@ import net.sf.jasperreports.engine.export.JRXlsExporter;
 public class SampleReportServlet extends HttpServlet {
 	private final Logger log = Logger.getLogger(this.getClass());
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
-	protected void processRequest(HttpServletRequest req, HttpServletResponse resp) {
+	protected void processRequest(final HttpServletRequest req, final HttpServletResponse resp) {
 
-		String sourceFileName = this.getClass().getResource("/reports/rpt_test.jasper").getFile();
-		InputStream resourceStream = this.getClass().getResourceAsStream("/reports/rpt_test.jasper");
-		InputStream pdfStream = this.getClass().getResourceAsStream("/reports/rpt_test.jasper");
+		final String sourceFileName = this.getClass().getResource("/reports/rpt_test.jasper").getFile();
+		final InputStream resourceStream = this.getClass().getResourceAsStream("/reports/rpt_test.jasper");
+		final InputStream pdfStream = this.getClass().getResourceAsStream("/reports/rpt_test.jasper");
 		File xlsFile = null;
 		String output = null;
-		JRDataSource jrDataSource = new JREmptyDataSource();
+		final JRDataSource jrDataSource = new JREmptyDataSource();
 		ServletOutputStream servletOutputStream;
 		JasperPrint jasperPrint = null;
-		JRXlsExporter exporter = new JRXlsExporter();
+		final JRXlsExporter exporter = new JRXlsExporter();
 
-		Map<String, Object> parameters = new HashMap<String, Object>();
+		final Map<String, Object> parameters = new HashMap<String, Object>();
 		try {
 			xlsFile = new File(this.getClass().getResource("/reports/").toURI());
 			if (!xlsFile.exists()) {
 				xlsFile.mkdirs();
 			}
-			String reportDestination = xlsFile.getAbsolutePath() + "/excel.xls";
+			final String reportDestination = xlsFile.getAbsolutePath() + "/excel.xls";
 			xlsFile = new File(reportDestination);
 
 			resp.setContentType("application/pdf");
@@ -73,7 +73,7 @@ public class SampleReportServlet extends HttpServlet {
 			output = JasperExportManager.exportReportToPdfFile(output);
 			log.info(output + " exported");
 
-			FileInputStream fis = new FileInputStream(new File(reportDestination));
+			final FileInputStream fis = new FileInputStream(new File(reportDestination));
 			resp.setContentType("application/vnd.ms-excel");
 			resp.setHeader("Content-Disposition", "attachment; filename=" + "excel.xls");
 			IOUtils.copy(fis, resp.getOutputStream());
@@ -90,12 +90,12 @@ public class SampleReportServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
 		processRequest(req, resp);
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
 		processRequest(req, resp);
 	}
 

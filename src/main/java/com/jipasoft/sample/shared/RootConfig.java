@@ -14,7 +14,7 @@ public class RootConfig {
 
 	@Bean
 	public JasperReportsViewResolver getJasperReportsViewResolver() {
-		JasperReportsViewResolver reportResolver = new JasperReportsViewResolver();
+		final JasperReportsViewResolver reportResolver = new JasperReportsViewResolver();
 		reportResolver.setPrefix("classpath:/reports/");
 		reportResolver.setSuffix(".jasper");
 		reportResolver.setReportDataKey("datasource");
