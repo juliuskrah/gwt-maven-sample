@@ -23,7 +23,4 @@
   <source path='client' />
   <source path='shared' />
 
-  <!-- Super-dev mode stuff, redirect should be false in production! -->
-  <add-linker name="xsiframe"/>
-
 </module>

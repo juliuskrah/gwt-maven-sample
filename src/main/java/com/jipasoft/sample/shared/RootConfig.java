@@ -4,12 +4,10 @@ import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.jasperreports.JasperReportsMultiFormatView;
 import org.springframework.web.servlet.view.jasperreports.JasperReportsViewResolver;
 
 @Configuration
-@EnableWebMvc
 @ComponentScan(basePackages = { "com.jipasoft.sample" })
 public class RootConfig {
 	private final Logger log = Logger.getLogger(this.getClass());
