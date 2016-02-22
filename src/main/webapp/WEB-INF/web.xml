@@ -36,17 +36,40 @@
 			<param-value>com.jipasoft.sample.shared</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
-
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
 		<url-pattern>/JasperGWT/springGwtServices/*</url-pattern>
 	</servlet-mapping>
-	
+
+	Spring dispatcher
+	<servlet>
+		<servlet-name>spring-web</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextClass</param-name>
+			<param-value>
+				org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>com.jipasoft.sample.shared.config</param-value>
+		</init-param>
+		<!-- <load-on-startup>2</load-on-startup> -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>spring-web</servlet-name>
+		<url-pattern>/JasperGWT/springServlet/*</url-pattern>
+	</servlet-mapping>
+
 	<!-- jasper servlet -->
 	<servlet>
 		<servlet-name>jasperServlet</servlet-name>
-		<servlet-class>com.jipasoft.sample.server.SampleReportServlet</servlet-class>
+		<servlet-class>com.jipasoft.sample.server.SampleReportServlet
+		</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>jasperServlet</servlet-name>

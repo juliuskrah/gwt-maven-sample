@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import net.sf.jasperreports.engine.JREmptyDataSource;
 
 @Controller
-@RequestMapping("springGwtServices")
+@RequestMapping
 public class ReportController {
 	private final Logger log = Logger.getLogger(this.getClass());
 
