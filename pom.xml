@@ -12,6 +12,7 @@
 
 	<properties>
 		<springVersion>4.2.4.RELEASE</springVersion>
+		<servletapiVersion>3.1.0</servletapiVersion>
 		<hsqldbVersion>2.3.3</hsqldbVersion>
 		<!-- Convenience property to set the GWT version -->
 		<gwtVersion>2.7.0</gwtVersion>
@@ -121,6 +122,13 @@
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 			<version>${hsqldbVersion}</version>
+		</dependency>
+		<!-- servlet api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servletapiVersion}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 

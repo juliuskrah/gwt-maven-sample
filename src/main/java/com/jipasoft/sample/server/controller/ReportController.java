@@ -16,6 +16,7 @@ public class ReportController {
 	public String generateReport(final Model model) {
 		model.addAttribute("datasource", new JREmptyDataSource());
 		model.addAttribute("format", "pdf");
+		model.addAttribute("dummy", "julius");
 
 		log.info("Report Test Executed");
 		return "rpt_test";

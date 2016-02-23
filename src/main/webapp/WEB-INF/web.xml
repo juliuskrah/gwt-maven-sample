@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
 
 	<context-param>
 		<param-name>contextClass</param-name>
@@ -14,17 +15,14 @@
 		<param-value>com.jipasoft.sample.shared</param-value>
 	</context-param>
 	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener
-		</listener-class>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
 
 	<!-- SpringGwt remote service servlet -->
 	<servlet>
 		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
-		<servlet-class>
-			org.spring4gwt.server.SpringGwtRemoteServiceServlet
-		</servlet-class>
+		<servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
 		<init-param>
 			<param-name>contextClass</param-name>
 			<param-value>
@@ -42,11 +40,10 @@
 		<url-pattern>/JasperGWT/springGwtServices/*</url-pattern>
 	</servlet-mapping>
 
-	Spring dispatcher
+	<!-- Spring dispatcher -->
 	<servlet>
 		<servlet-name>spring-web</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet
-		</servlet-class>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextClass</param-name>
 			<param-value>
@@ -63,17 +60,6 @@
 	<servlet-mapping>
 		<servlet-name>spring-web</servlet-name>
 		<url-pattern>/JasperGWT/springServlet/*</url-pattern>
-	</servlet-mapping>
-
-	<!-- jasper servlet -->
-	<servlet>
-		<servlet-name>jasperServlet</servlet-name>
-		<servlet-class>com.jipasoft.sample.server.SampleReportServlet
-		</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>jasperServlet</servlet-name>
-		<url-pattern>/JasperGWT/rptUserReport</url-pattern>
 	</servlet-mapping>
 
 	<!-- Default page to serve -->
