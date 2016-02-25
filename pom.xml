@@ -165,6 +165,24 @@
 					<i18nMessagesBundle>com.jipasoft.sample.client.Messages</i18nMessagesBundle>
 				</configuration>
 			</plugin>
+
+			<!-- Copy static web files before executing gwt:run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+				</configuration>
+			</plugin>
 		</plugins>
 
 	</build>

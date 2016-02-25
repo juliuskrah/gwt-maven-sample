@@ -24,10 +24,7 @@ With version 2.7.0 of the `gwt-maven-plugin`, the application starts in
 
 ### Running the super mode
 To run the application in `super dev mode`, run
-> mvn war:exploded gwt:run
-
-The `war:exploded` goal is to ensure all libraries are copied to the `/WEB-INF/lib/` directory. Just running
-`mvn gwt:run` _won't_ do that.
+> mvn gwt:run
 
 This will open the GWT Development Mode. Visit [http://127.0.0.1:8888/JasperGWT.html](http://127.0.0.1:8888/JasperGWT.html) in your browser
 
