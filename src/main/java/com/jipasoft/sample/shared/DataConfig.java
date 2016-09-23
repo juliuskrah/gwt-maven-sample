@@ -23,14 +23,18 @@ public class DataConfig {
 	@Bean
 	public DataSource getDataSource() {
 		final EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-		final EmbeddedDatabase db = builder.setName("testdb").setType(EmbeddedDatabaseType.HSQL).addScript("db/sql/create-db.sql")
-				.addScript("db/sql/insert-data.sql").build();
-
+		// @formatter:off
+		final EmbeddedDatabase db = builder
+				.setName("testdb")
+				.setType(EmbeddedDatabaseType.HSQL)
+				.addScript("db/sql/create-db.sql")
+				.addScript("db/sql/insert-data.sql")
+				.build();
+		// @formatter:on
 		log.info("database created");
 		return db;
 	}
 
 	@PostConstruct
-	public void startDBManager() {
-	}
+	public void startDBManager() {}
 }
