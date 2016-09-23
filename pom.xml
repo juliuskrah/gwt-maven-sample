@@ -11,16 +11,24 @@
 	<name>GWT Maven Archetype</name>
 
 	<properties>
-		<springVersion>4.2.4.RELEASE</springVersion>
-		<servletapiVersion>3.1.0</servletapiVersion>
-		<hsqldbVersion>2.3.3</hsqldbVersion>
+		<apachePOIVersion>3.13</apachePOIVersion>
+		<commonsIOVersion>2.4</commonsIOVersion>
+
 		<!-- Convenience property to set the GWT version -->
 		<gwtVersion>2.7.0</gwtVersion>
+		<hsqldbVersion>2.3.3</hsqldbVersion>
+		<jasperReportsVersion>6.2.0</jasperReportsVersion>
+		<junitVersion>4.12</junitVersion>
+		<log4jVersion>1.2.17</log4jVersion>
+
 		<!-- GWT needs at least java 1.6 -->
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
-		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<springVersion>4.2.4.RELEASE</springVersion>
+		<spring4GWTVersion>0.0.1</spring4GWTVersion>
+		<servletapiVersion>3.1.0</servletapiVersion>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
 	</properties>
 
 	<dependencyManagement>
@@ -40,19 +48,19 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.13</version>
+			<version>${apachePOIVersion}</version>
 		</dependency>
 		<!-- jasper report -->
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>
-			<version>6.2.0</version>
+			<version>${jasperReportsVersion}</version>
 		</dependency>
 		<!-- log4j -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<version>${log4jVersion}</version>
 		</dependency>
 		<!-- GWT -->
 		<dependency>
@@ -74,7 +82,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>${junitVersion}</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- Validation -->
@@ -93,7 +101,7 @@
 		<dependency>
 			<groupId>org.spring4gwt</groupId>
 			<artifactId>spring4gwt</artifactId>
-			<version>0.0.1</version>
+			<version>${spring4GWTVersion}</version>
 		</dependency>
 		<!-- Spring dependencies -->
 		<dependency>
@@ -115,7 +123,7 @@
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
+			<version>${commonsIOVersion}</version>
 		</dependency>
 		<!-- hsqldb -->
 		<dependency>
